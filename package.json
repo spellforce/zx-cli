@@ -1,0 +1,26 @@
+{
+  "name": "zx-cli",
+  "version": "1.0.0",
+  "description": "Personal cli tool",
+  "type": "module",
+  "bin": {
+    "zx-cli": "bin/zx-cli.mjs"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "author": "zx <1243236087@qq.com>",
+  "license": "MIT",
+  "keywords": [
+    "cli",
+    "tool"
+  ],
+  "dependencies": {
+    "chalk": "4.1.2",
+    "commander": "^9.3.0",
+    "didyoumean": "^1.2.2",
+    "download-git-repo": "^3.0.2",
+    "ora": "^6.1.2",
+    "semver": "^7.3.7"
+  }
+}
