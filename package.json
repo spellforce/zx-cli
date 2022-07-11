@@ -1,6 +1,6 @@
 {
   "name": "zx-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Personal cli tool",
   "type": "module",
   "bin": {
