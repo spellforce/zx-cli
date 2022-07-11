@@ -1,6 +1,6 @@
 {
   "name": "zx-cli-tool",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Personal cli tool",
   "type": "module",
   "main": "index.js",
