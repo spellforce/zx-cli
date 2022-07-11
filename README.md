@@ -22,7 +22,7 @@ Commands:
   list           list all available project template
   update         update zx-cli tool
 ```
-## Q&F
+## Q&A
 
 ### 更新模版还需要改代码吗？
 不需要，cli自动遍历模版文件，inquirer也是动态的.

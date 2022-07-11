@@ -40,10 +40,13 @@ const release = async () => {
         type: 'input'
       }
     ]);
-    execSync(`git add . && git commit -m "[Upgrade ${release}] ${message}" && git push`, {
+    execSync(`git add . && git commit -m "[Upgrade ${release}] ${message}"`, {
       stdio: 'inherit'
     });
     execSync(`npm version ${release}`, {
+      stdio: 'inherit'
+    });
+    execSync(`git push`, {
       stdio: 'inherit'
     });
   } else {
