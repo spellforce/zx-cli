@@ -13,6 +13,9 @@
   "scripts": {
     "release": "node scripts/release.js"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "keywords": [
     "cli",
