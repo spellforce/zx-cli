@@ -13,13 +13,14 @@
   "license": "MIT",
   "keywords": [
     "cli",
-    "tool"
+    "tool",
+    "zx"
   ],
   "dependencies": {
     "chalk": "4.1.2",
     "commander": "^9.3.0",
     "didyoumean": "^1.2.2",
-    "download-git-repo": "^3.0.2",
+    "fs-extra": "^10.1.0",
     "ora": "^6.1.2",
     "semver": "^7.3.7"
   }
