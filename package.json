@@ -1,6 +1,6 @@
 {
-  "name": "zx-cli-tool",
-  "version": "1.0.1",
+  "name": "spellforce-zx-cli",
+  "version": "1.0.0",
   "description": "Personal cli tool",
   "type": "module",
   "main": "index.js",
