@@ -3,9 +3,7 @@
   "version": "1.0.3",
   "description": "Personal cli tool",
   "type": "module",
-  "bin": {
-    "zx-cli": "bin/zx-cli.mjs"
-  },
+  "main": "index.js",
   "engines": {
     "node": ">=8.0.0"
   },
@@ -13,8 +11,8 @@
   "scripts": {
     "release": "node scripts/release.js"
   },
-  "publishConfig": {
-    "access": "public"
+  "bin": {
+    "zx-cli": "bin/zx-cli.mjs"
   },
   "license": "MIT",
   "keywords": [
