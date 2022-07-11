@@ -10,6 +10,9 @@
     "node": ">=8.0.0"
   },
   "author": "zx <1243236087@qq.com>",
+  "scripts": {
+    "release": "node scripts/release.js"
+  },
   "license": "MIT",
   "keywords": [
     "cli",
