@@ -6,12 +6,12 @@ To facilitate build project startup
 ## 教程
 
 ```
-npm install -g zx-cli
+npm install -g spellforce-zx-cli
 zx-cli create
 ```
 
 ```
-Usage:  <command> [options]
+Usage: zx-cli <command> [options]
 
 Options:
   -v, --version  output the version number
@@ -19,6 +19,8 @@ Options:
 
 Commands:
   create         create a new project from a template
+  list           list all available project template
+  update         update zx-cli tool
 ```
 ## Q&F
 

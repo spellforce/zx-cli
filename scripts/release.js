@@ -31,17 +31,16 @@ const release = async () => {
   ]);
   // 优先自定义版本
   // const version = versions[release];
-  // 二次确认发布
-  // const { yes } = await inquirer.prompt([
-  //   {
-  //     name: 'yes',
-  //     message: `Confirm releasing ${release}`,
-  //     type: 'confirm'
-  //   }
-  // ]);
 
   if (isCommit) {
-    execSync(`git add . && git commit -m "[Upgrade] ${release}"`, {
+    const { message } = await inquirer.prompt([
+      {
+        name: 'message',
+        message: 'Write your commit message',
+        type: 'input'
+      }
+    ]);
+    execSync(`git add . && git commit -m "[Upgrade ${release}] ${message}" && git push`, {
       stdio: 'inherit'
     });
     execSync(`npm version ${release}`, {
