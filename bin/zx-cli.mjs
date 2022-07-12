@@ -4,6 +4,7 @@ import { program } from 'commander';
 import chalk from 'chalk';
 import didYouMean from 'didyoumean';
 import inquirer from 'inquirer';
+import process from 'process';
 import path from 'path';
 import ora from 'ora';
 import { createRequire } from "module";
@@ -46,11 +47,10 @@ const path2obj = (source, result, count = 0) => {
 
 const getTemplateObject = () => {
   const paths = getTemplatePath(templateDir);
-  // console.log(paths)
   let result = {};
   paths.map(item => {
-    const temp = item.replace(templateDir + "/", "");
-    const tempArr = temp.split("/");
+    const temp = item.replace(templateDir + path.sep, "");
+    const tempArr = temp.split(path.sep);
     
     path2obj(tempArr, result);
   });
@@ -75,7 +75,10 @@ const generateInquirer = async (templates, result = []) => {
 
 const checkUpdate = (isShow) => {
   const spinner = ora('Checking').start();
-  const result = childProcess.spawnSync("npm", ["update", "-g", "zx-cli"]);
+  const result = childProcess.spawnSync("npm", ["update", "-g", "zx-cli"], {
+    // stdio: 'inherit', 当前进程和子进程联通
+    shell: process.platform === 'win32'
+  });
   
   if (result.error) {
     spinner.fail("Check finished");
