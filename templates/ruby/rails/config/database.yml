@@ -1,0 +1,29 @@
+# MySQL. Versions 5.1.10 and up are supported.
+#
+# Install the MySQL driver
+#   gem install mysql2
+#
+# Ensure the MySQL gem is defined in your Gemfile
+#   gem 'mysql2'
+#
+# And be sure to use new-style password hashing:
+#   http://dev.mysql.com/doc/refman/5.7/en/old-client.html
+#
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: "<%= ENV['LOCAL_DB_USER'] %>"
+  password: "<%= ENV['LOCAL_DB_PASSWORD'] %>"
+  host: "<%= ENV['LOCAL_DB_HOST'] %>"
+  
+development:
+  <<: *default
+  database: <%= ENV['AURORA_GRIDX_APP_DB_NAME'] %>
+
+production:
+  <<: *default
+  database: <%= ENV['AURORA_GRIDX_APP_DB_NAME'] %>
+  username: <%= ENV['AURORA_GRIDX_APP_USERNAME'] %>
+  password: <%= ENV['AURORA_GRIDX_APP_PASSWORD'] %>
+  host: <%= ENV['AURORA_GRIDX_APP_HOST'] %>

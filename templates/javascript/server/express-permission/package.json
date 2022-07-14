@@ -2,7 +2,6 @@
   "name": "spellforce-zx-cli",
   "version": "1.0.6",
   "description": "Personal cli tool",
-  "type": "module",
   "main": "index.js",
   "engines": {
     "node": ">=8.0.0"
@@ -15,18 +14,10 @@
     "zx-cli": "bin/zx-cli.mjs"
   },
   "license": "MIT",
-  "keywords": [
-    "cli",
-    "tool",
-    "zx"
-  ],
   "dependencies": {
     "chalk": "4.1.2",
-    "commander": "^9.3.0",
-    "didyoumean": "^1.2.2",
     "fs-extra": "^10.1.0",
     "inquirer": "^9.0.0",
-    "ora": "^6.1.2",
-    "semver": "^7.3.7"
+    "ora": "^6.1.2"
   }
 }

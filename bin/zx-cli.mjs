@@ -29,10 +29,16 @@ const getTemplatePath = (p, results = []) => {
     results.push(temp);
     return results;
   } else {
-    const paths = fs.readdirSync(temp);
-    const arr = paths.map(pa => getTemplatePath(path.join(temp, pa), results));
-    results.concat(arr);
-    return results;
+    try {
+      const paths = fs.readdirSync(temp);
+      const arr = paths.map(pa => getTemplatePath(path.join(temp, pa), results));
+      results.concat(arr);
+      return results;
+    } catch(err) {
+      if (err.code !== "ENOTDIR") {
+        console.error(err)
+      }
+    }
   }
 };
 
