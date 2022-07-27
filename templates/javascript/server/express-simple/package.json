@@ -1,0 +1,22 @@
+{
+  "name": "express-simple",
+  "version": "1.0.0",
+  "description": "Express simple template",
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "author": "zx <1243236087@qq.com>",
+  "scripts": {
+    "start": "nodemon index.js",
+    "http2": "nodemon http2Index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "spdy": "^4.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
